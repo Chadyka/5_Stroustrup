@@ -24,8 +24,10 @@ public class BugousStuffProducer {
     public static void main(String[] args) throws IOException {
         BugousStuffProducer bsp = new BugousStuffProducer("bugous.txt");
         bsp.writeStuff();
-        //bsp.writer.flush(); is being called on closing of a file
+        // bsp.writer.flush(); is being called on the closing of a file
+
         // if a FileWriter is not closed it wont write the buffer to disc
+        // thus we will get an empty file with no text whatsoever
     }
 }
 
